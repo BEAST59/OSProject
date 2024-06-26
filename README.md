@@ -459,8 +459,11 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 
 ***Questions:***
 
-1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
-2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Fill answer here__.
+1. Are files in the container persistent. Why not?. ***(1 mark)*** 
+ - Files in the docker container are not persistent. Because when a container is deleted, all data stored inside it will loss unless it has been explicity svaed to a volume
+ - For this project case, when we remove the container 'nervous_kepler', the 'helloworld.txt' file and data within it sill deleted along with the container.
+2. Can we run two, or three instances of debian linux? . ***(1 mark)*** 
+ - Yes we can run 2 or 3 instances of debian linux using docker.
 
 ## Running your own container with persistent storage
 
