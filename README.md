@@ -460,8 +460,8 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 ***Questions:***
 
 1. Are files in the container persistent. Why not?. ***(1 mark)*** 
- - Files in the docker container are not persistent. Because when a container is deleted, all data stored inside it will loss unless it has been explicity svaed to a volume
- - For this project case, when we remove the container 'nervous_kepler', the 'helloworld.txt' file and data within it sill deleted along with the container.
+ - Files in the docker container are not persistent. Because when a container is deleted, all data stored inside it will loss unless it has been explicity saved to a volume
+ - For this project case, when we remove the container 'nervous_kepler', the 'helloworld.txt' file and data within it will still be deleted along with the container.
 2. Can we run two, or three instances of debian linux? . ***(1 mark)*** 
  - Yes we can run 2 or 3 instances of debian linux using docker.
 
@@ -482,14 +482,25 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __Fill answer here__.
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** 
+ - 'persistentfile.txt' has been created in the Docker container and visible in 'myroot' directory on VM.
+ - Persmission: 'rw-rw-rw' , meaning that the file is readable and writable by the owner
+ - User: 'root'
+ - Group: 'root'
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
 sudo chown -R codespace:codespace myroot
 
 ```
-*** __Fill answer here__.***
+```bash
+//ouput
+@BEAST59 ➜ /workspaces/OSProject/myroot (main) $ sudo chown -R codespace:codespace /workspaces/OSProject/myroot
+@BEAST59 ➜ /workspaces/OSProject/myroot (main) $ ls -l /workspaces/OSProject/myroot
+total 4
+-rw-rw-rw- 1 codespace codespace 23 Jun 26 15:13 persistentfile.txt
+```
+ - Yes, we can change the permission of the files in the 'myroot' directory to the user 'codespace' group 'codespace' using above output command.
 
 ## You are on your own, create your own static webpage
 
