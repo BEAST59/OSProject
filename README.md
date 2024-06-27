@@ -573,7 +573,7 @@ b9d36646b876   none      null      local
 - c1: 172.18.0.2
 - c2: 172.19.0.2
 
-5. Using the command ```docker exec c1 ping c2```, which basically tries to do a ping from container c1 to c2. Are you able to ping? Show your output . ***(1 mark)*** __Fill answer here__.
+5. Using the command ```docker exec c1 ping c2```, which basically tries to do a ping from container c1 to c2. Are you able to ping? Show your output . ***(1 mark)*** 
 ```bash
 @BEAST59 ➜ /workspaces/OSProject/webpage (main) $ docker exec c1 ping c2
 ping: bad address 'c2'
@@ -588,8 +588,23 @@ docker exec c1 ping c2
 ```
 ***Questions:***
 
-1. Are you able to ping? Show your output . ***(1 mark)*** __Fill answer here__.
-2. What is different from the previous ping in the section above? ***(1 mark)*** __Fill answer here__.
+1. Are you able to ping? Show your output . ***(1 mark)*** 
+```bash
+@BEAST59 ➜ /workspaces/OSProject (main) $ docker exec c1 ping c2
+PING c2 (172.20.0.3): 56 data bytes
+64 bytes from 172.20.0.3: seq=0 ttl=64 time=0.141 ms
+64 bytes from 172.20.0.3: seq=1 ttl=64 time=0.082 ms
+64 bytes from 172.20.0.3: seq=2 ttl=64 time=0.096 ms
+64 bytes from 172.20.0.3: seq=3 ttl=64 time=0.096 ms
+64 bytes from 172.20.0.3: seq=4 ttl=64 time=0.105 ms
+64 bytes from 172.20.0.3: seq=5 ttl=64 time=0.092 ms
+64 bytes from 172.20.0.3: seq=6 ttl=64 time=0.120 ms
+64 bytes from 172.20.0.3: seq=7 ttl=64 time=0.093 ms
+64 bytes from 172.20.0.3: seq=8 ttl=64 time=0.094 ms
+64 bytes from 172.20.0.3: seq=9 ttl=64 time=0.094 ms
+```
+2. What is different from the previous ping in the section above? ***(1 mark)*** 
+- The difference is that after connecting both containers to a new network (bridgenet), they are now able to communicate directly. Previously, they could not ping each other because they were on separate, isolated networks.
 
 ## Intermediate Level (10 marks bonus)
 
