@@ -27,7 +27,7 @@ Team Mates:
 1. What is the link of the fork OSProject in your repository. ***(1 mark)***
    - https://github.com/BEAST59/OSProject
 3. How many files and folders are in this repository. ***(1 mark)***
-   - 1 Files and 1 Folder.
+   - 1 Files (README.md) and 4 Folders (images, myroot, nodejs-app, webpage).
 
 
 ## Exploring github codespaces
