@@ -748,9 +748,24 @@ You have now set up a Node.js application in a Docker container on nodejsnet net
 
 ***Questions:***
 
-1. What is the output of step 5 above, explain the error? ***(1 mark)*** __Fill answer here__.
-2. Show the instruction needed to make this work. ***(1 mark)*** __Fill answer here__.
-
+1. What is the output of step 5 above, explain the error? ***(1 mark)*** 
+ - The output of step 5 is "Server Error".
+ - Meaning that the error is because of the authentication issue between the Node.js app and the MySQL client library that cannot handle the default authentication method used by MySQL 8.x.
+2. Show the instruction needed to make this work. ***(1 mark)*** 
+ - To fix it, do the instruction below:
+ 1. Log into MySQL as root:
+ ```sh
+ docker exec -it mysql-container mysql -uroot -prootpassword
+ ```
+ 2. Run the SQL command:
+ ```sh
+ ALTER USER 'myuser'@'%' IDENTIFIED WITH mysql_native_password BY 'mypassword';
+ FLUSH PRIVILEGES;
+ ```
+ 3. Restart the Node.js container:
+ ```sh
+ docker restart nodejs-container
+ ```
 
 
 ## What to submit
