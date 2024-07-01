@@ -7,7 +7,7 @@ Section: 4.
 Team Mates:
 1. MUHAMMAD IKMAL HAKIMI BIN ROSLI (2210827)
 2. MUHAMMAD AFNAN HARIZ BIN ABDUL KAHAR (2215477)
-3. MUHAMMAD LUQMAN BISTHAMY BIN SHAM ZULANEY  (22216289)
+3. MUHAMMAD LUQMAN BISTHAMY BIN SHAM ZULANEY  (2216289)
 
 ## Rules
 1. You are allowed to have **3 group** members. *Exception* is allowed **IFF (if and only if)** you are allowed to have 4 group members if you are a **multinational** or a **multigender** group. 
